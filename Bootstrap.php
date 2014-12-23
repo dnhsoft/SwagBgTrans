@@ -16,7 +16,6 @@ class Shopware_Plugins_Frontend_SwagBgTrans_Bootstrap extends Shopware_Component
     public function getVersion()
     {
         return '0.0.1';
-        var_dump('sb:da');exit;
     }
 
     /**
