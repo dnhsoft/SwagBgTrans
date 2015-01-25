@@ -72,8 +72,8 @@ class Shopware_Plugins_Frontend_SwagBgTrans_Bootstrap extends Shopware_Component
 
     public function uninstall()
     {
-        $sql = "DELETE FROM `s_core_snippets` WHERE `localeID` = 30;";
-        Shopware()->Db()->exec($sql);
+//        $sql = "DELETE FROM `s_core_snippets` WHERE `localeID` = 30;";
+//        Shopware()->Db()->exec($sql);
 
         return true;
     }
