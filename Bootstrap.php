@@ -8,6 +8,7 @@
  */
 class Shopware_Plugins_Frontend_SwagBgTrans_Bootstrap extends Shopware_Components_Plugin_Bootstrap
 {
+
     /**
      * Returns current plugin version
      *
