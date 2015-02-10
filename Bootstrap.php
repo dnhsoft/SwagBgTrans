@@ -82,8 +82,8 @@ class Shopware_Plugins_Frontend_SwagBgTrans_Bootstrap extends Shopware_Component
 
 //        $sql = "DELETE FROM `s_core_snippets` WHERE `localeID` = 30;";
 //        Shopware()->Db()->exec($sql);
-//
-//        return true;
+
+        return true;
     }
 
     public function importFrontendTranslations()
