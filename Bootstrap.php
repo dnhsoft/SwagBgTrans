@@ -61,7 +61,8 @@ class Shopware_Plugins_Frontend_SwagBgTrans_Bootstrap extends Shopware_Component
     public function install()
     {
         $this->importFrontendTranslations();
-        $this->importFrontendTranslations();
+        $this->importBackendTranslations();
+        $this->addBackendLanguage();
 
         return array('success' => true, 'invalidateCache' => array('backend', 'config', 'frontend'));
     }
@@ -94,6 +95,33 @@ class Shopware_Plugins_Frontend_SwagBgTrans_Bootstrap extends Shopware_Component
 
     public function importBackendTranslations()
     {
+
+    }
+
+    public function addBackendLanguage()
+    {
+        $repository = Shopware()->Models()->getRepository('Shopware\Models\Config\Element');
+        $element = $repository->findOneBy(array('name' => 'backendLocales'));
+
+        if (count($element->getValues()) > 0) {
+            $values = $element->getValues();
+            $value = $values[0]->getValue();
+            if (!in_array(30, $value)) {
+                $value[] = 30;
+                $values[0]->setValue($value);
+                Shopware()->Models()->persist($values[0]);
+            }
+        } else {
+            $value = new \Shopware\Models\Config\Value();
+            $value->setElement($element);
+            $shop = Shopware()->Models()->getRepository('Shopware\Models\Shop\Shop')->find(1);
+            $value->setShop($shop);
+            $value->setValue(array(1, 2, 30));
+
+            Shopware()->Models()->persist($value);
+        }
+
+        Shopware()->Models()->flush();
 
     }
 } 
