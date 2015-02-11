@@ -95,7 +95,8 @@ class Shopware_Plugins_Frontend_SwagBgTrans_Bootstrap extends Shopware_Component
 
     public function importBackendTranslations()
     {
-
+        $sql = file_get_contents($this->Path() . 'Snippets/backend.sql');
+        Shopware()->Db()->exec($sql);
     }
 
     public function addBackendLanguage()
