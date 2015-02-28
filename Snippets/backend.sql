@@ -782,7 +782,14 @@ INSERT IGNORE INTO `s_core_snippets` (`namespace`, `shopID`, `localeID`, `name`,
 ('backend/application/main', 1, 30, 'progress_window/request_header', 'Заявка', '2014-12-06 18:00:00', '2014-12-06 18:00:00'),
 ('backend/application/main', 1, 30, 'progress_window/request_result_title', 'Резултати от заявка', '2014-12-06 18:00:00', '2014-12-06 18:00:00'),
 ('backend/application/main', 1, 30, 'progress_window/success_header', 'Успешно', '2014-12-06 18:00:00', '2014-12-06 18:00:00'),
-('backend/application/main', 1, 30, 'progress_window/title', 'Изтриване на записи', '2014-12-06 18:00:00', '2014-12-06 18:00:00')
+('backend/application/main', 1, 30, 'progress_window/title', 'Изтриване на записи', '2014-12-06 18:00:00', '2014-12-06 18:00:00'),
+
+('backend/auth/login_panel', 1, 30, 'LocaleField', 'Език', '2014-12-06 18:00:00', '2014-12-06 18:00:00'),
+('backend/auth/login_panel', 1, 30, 'LoginButton', 'Вход', '2014-12-06 18:00:00', '2014-12-06 18:00:00'),
+('backend/auth/login_panel', 1, 30, 'PasswordField', 'Парола', '2014-12-06 18:00:00', '2014-12-06 18:00:00'),
+('backend/auth/login_panel', 1, 30, 'PasswordMessage', 'Моля въведете парола!', '2014-12-06 18:00:00', '2014-12-06 18:00:00'),
+('backend/auth/login_panel', 1, 30, 'UserNameField', 'Парола', '2014-12-06 18:00:00', '2014-12-06 18:00:00'),
+('backend/auth/login_panel', 1, 30, 'UserNameMessage', 'Моля въведете потребителско име!', '2014-12-06 18:00:00', '2014-12-06 18:00:00')
 
 ON DUPLICATE KEY UPDATE
   `namespace` = VALUES(`namespace`),
