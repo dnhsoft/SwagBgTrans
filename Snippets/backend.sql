@@ -554,7 +554,9 @@ INSERT IGNORE INTO `s_core_snippets` (`namespace`, `shopID`, `localeID`, `name`,
 ('backend/article_list/view/main', 1, 30, 'messages/success', 'Успешно', '2014-12-06 18:00:00', '2014-12-06 18:00:00'),
 ('backend/article_list/view/main', 1, 30, 'split_view_already_active', 'Разделения изглед вече беше активиран. Моля затворете прозореца на продукта и активирайте разделения изглед отново.', '2014-12-06 18:00:00', '2014-12-06 18:00:00'),
 ('backend/article_list/view/main', 1, 30, 'splitview_text', 'Разделения изглед беше активиран.', '2014-12-06 18:00:00', '2014-12-06 18:00:00'),
-('backend/article_list/view/main', 1, 30, 'splitview_title', 'Разделен изглед', '2014-12-06 18:00:00', '2014-12-06 18:00:00')
+('backend/article_list/view/main', 1, 30, 'splitview_title', 'Разделен изглед', '2014-12-06 18:00:00', '2014-12-06 18:00:00'),
+
+('backend/activate/skeleton', 1, 30, 'WindowTitle', 'Изчистване на кеш', '2014-12-06 18:00:00', '2014-12-06 18:00:00')
 
 
 ON DUPLICATE KEY UPDATE
