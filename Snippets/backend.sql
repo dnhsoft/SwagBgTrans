@@ -866,7 +866,9 @@ INSERT IGNORE INTO `s_core_snippets` (`namespace`, `shopID`, `localeID`, `name`,
 ('backend/base/component/Shopware.MediaManager.MediaSelection', 1, 30, 'backend/base/component/media_selection/button_text', 'Избери файлове', '2014-12-06 18:00:00', '2014-12-06 18:00:00'),
 ('backend/base/index', 1, 30, 'meta/robots', 'noindex,nofollow', '2014-12-06 18:00:00', '2014-12-06 18:00:00'),
 ('backend/base/index', 1, 30, 'script/ext/lang', 'bg_BG', '2014-12-06 18:00:00', '2014-12-06 18:00:00'),
-('backend/base/vtype', 1, 30, 'password_match', 'Въведените парола не съвпадат.', '2014-12-06 18:00:00', '2014-12-06 18:00:00')
+('backend/base/vtype', 1, 30, 'password_match', 'Въведените парола не съвпадат.', '2014-12-06 18:00:00', '2014-12-06 18:00:00'),
+
+('backend/beta_feedback/view/main', 1, 30, 'window/title', 'Обратна връзка', '2014-12-06 18:00:00', '2014-12-06 18:00:00')
 
 ON DUPLICATE KEY UPDATE
   `namespace` = VALUES(`namespace`),
