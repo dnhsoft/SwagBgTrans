@@ -64,7 +64,7 @@ class Shopware_Plugins_Frontend_SwagBgTrans_Bootstrap extends Shopware_Component
         $this->importFrontendTranslations();
         $this->importBackendTranslations();
         $this->addBackendLanguage();
-        $this->importBaseSnippets();
+        $this->importBaseTranslations();
 
         return array('success' => true, 'invalidateCache' => array('backend', 'config', 'frontend'));
     }
