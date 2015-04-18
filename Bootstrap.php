@@ -67,6 +67,7 @@ class Shopware_Plugins_Frontend_SwagBgTrans_Bootstrap extends Shopware_Component
         $this->importBaseTranslations();
         $this->importDocumentsTranslations();
         $this->importNewsletterTranslations();
+        $this->importWidgetsTranslations();
 
         return array('success' => true, 'invalidateCache' => array('backend', 'config', 'frontend'));
     }
@@ -118,6 +119,12 @@ class Shopware_Plugins_Frontend_SwagBgTrans_Bootstrap extends Shopware_Component
     public function importNewsletterTranslations()
     {
         $sql = file_get_contents($this->Path() . 'Snippets/newsletter.sql');
+        Shopware()->Db()->exec($sql);
+    }
+
+    public function importWidgetsTranslations()
+    {
+        $sql = file_get_contents($this->Path() . 'Snippets/widgets.sql');
         Shopware()->Db()->exec($sql);
     }
 
